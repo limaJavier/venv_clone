@@ -4,8 +4,8 @@ import os
 from magic import Magic
 
 if __name__ == '__main__':
-    SOURCE_ENV = sys.argv[1]
-    DEST_ENV = sys.argv[2]
+    SOURCE_ENV = os.path.abspath(sys.argv[1])
+    DEST_ENV = os.path.abspath(sys.argv[2])
     SOURCE_SCRIPT_DIR = SOURCE_ENV + '/bin/'
     DEST_SCRIPT_DIR = DEST_ENV + '/bin/'
 
