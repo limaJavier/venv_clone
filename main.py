@@ -14,7 +14,7 @@ if __name__ == '__main__':
     mime = Magic(mime=True)
     scripts = []
     for file in os.listdir(SOURCE_SCRIPT_DIR):
-        if mime.from_file(SOURCE_SCRIPT_DIR + file) == 'text/plain':
+        if mime.from_file(SOURCE_SCRIPT_DIR + file)[:4] == 'text':
             scripts.append(file)
 
     for script in scripts:
